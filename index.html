@@ -1,1066 +1,420 @@
 <!doctype html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
     <title>Jonathan Scott Gilbert</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <style>
-        /********************************************
-* 	reset from
-* 	http://meyerweb.com/eric/tools/css/reset/
-*******************************************/
-
-        html,
-        body,
-        div,
-        span,
-        applet,
-        object,
-        iframe,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        blockquote,
-        pre,
-        a,
-        abbr,
-        acronym,
-        address,
-        big,
-        cite,
-        code,
-        del,
-        dfn,
-        em,
-        img,
-        ins,
-        kbd,
-        q,
-        s,
-        samp,
-        small,
-        strike,
-        strong,
-        sub,
-        sup,
-        tt,
-        var,
-        b,
-        u,
-        i,
-        center,
-        dl,
-        dt,
-        dd,
-        ol,
-        ul,
-        li,
-        fieldset,
-        form,
-        label,
-        legend,
-        table,
-        caption,
-        tbody,
-        tfoot,
-        thead,
-        tr,
-        th,
-        td,
-        article,
-        aside,
-        canvas,
-        details,
-        embed,
-        figure,
-        figcaption,
-        footer,
-        header,
-        hgroup,
-        menu,
-        nav,
-        output,
-        ruby,
-        section,
-        summary,
-        time,
-        mark,
-        audio,
-        video {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-size: 100%;
-            vertical-align: baseline;
-        }
-
-        article,
-        aside,
-        details,
-        figcaption,
-        figure,
-        footer,
-        header,
-        hgroup,
-        menu,
-        nav,
-        section {
-            display: block;
-        }
-
-        body {
-            line-height: 1;
-        }
-
-        ol,
-        ul {
-            list-style: none;
-        }
-
-        blockquote,
-        q {
-            quotes: none;
-        }
-
-        blockquote:before,
-        blockquote:after,
-        q:before,
-        q:after {
-            content: none;
-        }
-
-        table {
-            border-collapse: collapse;
-            border-spacing: 0;
-        }
-
-
-        /****************
-*	COMMONS
-****************/
-
-        body,
-        html {
-            font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-            font-size: 13px;
-            color: #40484f;
-            font-weight: 400;
-            letter-spacing: 0;
-            line-height: 1.46153846;
-            text-align: left;
-            -webkit-text-size-adjust: 100%;
-        }
-
-        p {
-            display: block;
-            margin-bottom: 1.3em;
-        }
-
-        a {
-            color: #0095ff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #0c65a5;
-            text-decoration: underline;
-        }
-
-        ul {
-            margin-top: 1rem;
-        }
-
-        li {
-            list-style-type: square;
-            list-style-position: outside;
-            margin-left: 1.3em;
-        }
-
-        .highlights>li>p {
-            margin-bottom: 0.5em;
-        }
-
-        h1 {
-            font-size: 2rem;
-        }
-
-        h2 {
-            font-size: 1.67rem;
-        }
-
-        h3 {
-            font-size: 1.27rem;
-        }
-
-        em {
-            color: #757575;
-        }
-
-        blockquote {
-            margin-bottom: 1em;
-        }
-
-        strong {
-            font-weight: 700;
-        }
-
-
-        /* main container */
-
-        #resume {
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-
-
-        /* every section wrapper */
-
-        .section {
-            margin-bottom: 1rem;
-        }
-
-        section .location {
-            margin-right: .5em;
-            color: #606d76;
-            font-weight: 700;
-        }
-
-        #contact {
-            margin-top: .5rem;
-        }
-
-        #profiles .item {
-            padding: 0;
-        }
-
-        #header>#profiles,
-        #header>#contact,
-        #skills,
-        #languages,
-        #interests {
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-flex-flow: row wrap;
-            flex-flow: row wrap;
-            -webkit-justify-content: flex-start;
-            justify-content: flex-start;
-        }
-
-        #header>div {
-            line-height: 1.5;
-        }
-
-        #header>div>div {
-            margin-right: 1.2em;
-        }
-
-        #header h1.name {
-            font-size: 2.8rem;
-            font-weight: 100;
-            line-height: 100%;
-        }
-
-        #header h2.label {
-            color: #202931;
-            font-size: 1.47rem;
-            font-weight: 300;
-        }
-
-        #header .picture {
-            width: 11em;
-            float: right;
-            border-radius: 4px;
-        }
-
-        .main-summary {
-            background: #f1f8ff;
-            padding: 1.2em 1em;
-            margin-top: 1rem;
-        }
-
-        .main-summary p {
-            margin: .15em 0 0;
-        }
-
-        h2.section-title {
-            display: inline-block;
-            background: #fff;
-            padding: 0 1em 0.3em 0;
-            color: #ff6d1f;
-            text-transform: uppercase;
-            font-weight: 600;
-            border: none;
-            font-size: .9rem;
-        }
-
-        .section>header {
-            position: relative;
-        }
-
-        .fa {
-            margin-right: 0.25em;
-        }
-
-        .section>header::after {
-            position: absolute;
-            left: 0;
-            top: .7em;
-            height: 1px;
-            background: #ccc;
-            content: "";
-            width: 100%;
-            z-index: -100;
-            display: block;
-        }
-
-        .section.main-summary>section {
-            margin: 0;
-        }
-
-        .section>section>header {
-            font-size: 1.38rem;
-            position: relative;
-            margin-top: .7em;
-        }
-
-        .section>section>header:first-of-type {
-            margin: 0;
-        }
-
-        .section>section>header .space-left {
-            position: absolute;
-            left: -1.56rem;
-            top: 5px;
-            color: #aaa;
-            line-height: 1;
-            opacity: 0;
-        }
-
-        .position,
-        .company,
-        .organization,
-        .institution,
-        .date,
-        .area,
-        .studyType,
-        .title,
-        .awarder {
-            display: inline;
-        }
-
-        .position,
-        .studyType,
-        .area,
-        .title,
-        .language,
-        .name {
-            font-weight: 600;
-        }
-
-        .company::before,
-        .institution::before,
-        .organization::before,
-        .awarder::before {
-            content: "at "
-        }
-
-        .company,
-        .institution,
-        .organization,
-        .awarder {
-            color: #606d76;
-            font-weight: 400;
-        }
-
-        .section header .date {
-            font-size: 1rem;
-            display: inline-table;
-            padding: .1em 0;
-            font-weight: 600;
-        }
-
-        ul.keywords,
-        ul.courses {
-            margin-top: .5em;
-        }
-
-        ul.keywords li,
-        ul.courses li {
-            display: inline-block;
-            margin: 2px 2px 2px 0;
-            padding: 4px 5px 5px;
-            font-size: .9rem;
-            line-height: 1;
-            text-transform: lowercase;
-            color: #3e6d8e;
-            background-color: #dfeaf1;
-            border: 0 solid #dfeaf1;
-            white-space: nowrap;
-        }
-
-        ul.keywords li:hover,
-        ul.courses li:hover {
-            background: #dfeaf0;
-        }
-
-        .item {
-            padding: .5em 0;
-        }
-
-        .gpa {
-            padding-bottom: .5em;
-        }
-
-        .fa.social {
-            font-size: 1.1em;
-        }
-
-
-        /* Social Media Brand Colors */
-
-        .google-plus {
-            color: #dd4b39;
-        }
-
-        .tumblr {
-            color: #32506d;
-        }
-
-        .foursquare {
-            color: #0072b1;
-        }
-
-        .facebook {
-            color: #3b5998;
-        }
-
-        .linkedin {
-            color: #007bb6;
-        }
-
-        .pinterest {
-            color: #cb2027;
-        }
-
-        .dribbble {
-            color: #ea4c89;
-        }
-
-        .instagram {
-            color: #517fa4;
-        }
-
-        .twitter {
-            color: #00aced;
-        }
-
-        .soundcloud {
-            color: #ff3a00;
-        }
-
-        .wordpress {
-            color: #21759b;
-        }
-
-        .youtube {
-            color: #bb0000;
-        }
-
-        .github {
-            color: #171515;
-        }
-
-        .stack-overflow {
-            color: #828386;
-            position: relative;
-        }
-
-        .flickr {
-            color: #ff0084;
-        }
-
-        .stack-overflow::after {
-            position: absolute;
-            left: 0;
-            content: '\f16c';
-            color: #f68a1f;
-            overflow: hidden;
-            height: 100%;
-        }
-
-        .telegram {
-            color: #2291c3;
-        }
-
-        #languages .item,
-        #skills .item,
-        #interests .item {
-            width: 15em;
-            padding: 0 .5em .5em 0;
-            border-bottom: none;
-        }
-
-        #skills .item {
-            width: 16em;
-        }
-
-        #skills .item .keywords {
-            width: 15em;
-        }
-
-
-        /* Skill chart */
-
-        .level {
-            margin-bottom: .5em;
-        }
-
-        .level .bar {
-            border: 1px solid #ddd;
-            display: block;
-            width: 10em;
-            height: 5px;
-            position: relative;
-        }
-
-        .level .bar::after {
-            position: absolute;
-            content: " ";
-            top: 0;
-            left: 0;
-            background: black;
-            height: 5px;
-        }
-
-        .level.beginner .bar::after {
-            background: #EB5F51;
-            width: 2.5em;
-        }
-
-        .level.intermediate .bar::after {
-            background: #ffdf1f;
-            width: 5em;
-        }
-
-        .level.advanced .bar::after,
-        .level.fluent .bar::after {
-            background: #5CB85C;
-            width: 7.5em;
-        }
-
-        .level.master .bar::after,
-        .level.native.speaker .bar::after {
-            background: #59C596;
-            width: 10em;
-        }
-
-        #references .item {
-            padding-left: .5em;
-            border-left: 5px solid #ff6d1f;
-        }
-
-        .toggle-item {
-            visibility: hidden;
-        }
-
-        /******************
-*	HELPER CLASSES
-******************/
-
-        .clear::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        .display {
-            display: block;
-            opacity: 1 !important;
-        }
-
-        .margin1 {
-            margin-bottom: .5rem;
-        }
-
-
-        /****************
-*		TABLET
-****************/
-
-        @media screen and (min-width: 602px) {
-            #resume {
-                width: 80%;
-                margin: 0 auto;
-            }
-        }
-
-
-        /****************
-*		LAPTOP
-****************/
-
-        @media screen and (min-width: 1025px) {
-            li {
-                margin-left: 1.5em;
-            }
-
-            #resume {
-                width: 820px;
-                margin: 2rem auto;
-            }
-
-            .section>section>header .space-left {
-                opacity: 1;
-                cursor: pointer;
-            }
-
-            .section>section {
-                margin-left: 1.67rem;
-            }
-
-            .toggle-item {
-                transform: translate(-9999px);
-            }
-
-            .toggle-item+label {
-                display: block;
-                margin-top: -16px;
-            }
-
-            .toggle-item:checked+label:after {
-                content: '\f0d7';
-            }
-
-            .toggle-item+label:after {
-                float: left;
-                cursor: pointer;
-                margin-left: -20px;
-                color: #aaa;
-                font-size: 16px;
-                content: '\f0da';
-                font-family: Fontawesome;
-            }
-
-            .toggle-item~.item {
-                height: 0;
-                opacity: 0;
-            }
-
-            .toggle-item:checked~.item {
-                height: auto;
-                opacity: 1;
-                transition: all .5s linear;
-            }
-
-            .company::before,
-            .institution::before,
-            .organization::before,
-            .awarder::before {
-                content: "| ";
-            }
-
-            .header-left {
-                float: left;
-                width: 70%;
-                word-break: normal;
-            }
-
-            .section header .date {
-                float: right;
-                padding: .2em;
-            }
-
-            .display {
-                display: none;
-            }
-
-            .display:not(.none) {
-                display: block;
-            }
-        }
-
-        @media print {
-            #resume {
-                margin: 0;
-                padding: 0;
-                -ms-word-wrap: break-word;
-                word-wrap: break-word;
-                line-height: 1.3;
-                /*font-family: Arial, Georgia, "Lucida Grande", sans-serif;*/
-            }
-
-            @page {
-                margin: 1cm 1.4cm;
-            }
-
-            .item-count {
-                display: none;
-            }
-
-            .company::before,
-            .institution::before,
-            .organization::before,
-            .awarder::before {
-                content: "at ";
-            }
-
-            .main-summary {
-                padding: 2rem 0;
-            }
-
-            .section {
-                margin: .8rem 0;
-                padding: 0;
-            }
-
-            .section header {
-                padding-bottom: .15rem;
-            }
-
-            .section .location {
-                padding-bottom: .15rem;
-            }
-
-            .stack-overflow::after {
-                content: "";
-            }
-
-            .fa.social {
-                color: #828386;
-            }
-
-            ul {
-                margin-top: .4em;
-            }
-
-            ul,
-            li {
-                padding: 0;
-            }
-
-            ul.keywords li,
-            ul.courses li {
-                margin: 0;
-                padding: 0;
-                font-size: .8rem;
-                text-transform: lowercase;
-            }
-
-            ul.keywords li::after,
-            ul.courses li::after {
-                padding: 0 0 0 .1rem;
-                content: " |";
-            }
-
-            ul.keywords::before,
-            ul.courses::before {
-                font-size: .8rem;
-                font-weight: 600;
-            }
-
-            ul.keywords::before {
-                content: "Skills acquired: ";
-            }
-
-            #skills .keywords::before {
-                content: '';
-            }
-
-            .section p {
-                margin: 0;
-                padding: 0;
-            }
-
-            ul.courses::before {
-                content: "Major courses: ";
-            }
-
-            ul.keywords li:last-of-type::after,
-            ul.courses li:last-of-type::after {
-                content: "";
-            }
-
-            .level em {
-                font-style: normal;
-                padding: .1em 0;
-            }
-
-            .level .bar {
-                display: none;
-            }
-
-            #profiles .item {
-                padding: 0;
-            }
-
-            .item.display {
-                display: block;
-                opacity: 1 !important;
-            }
-        }
-    </style>
-
-</head>
-
-<body>
-
-    <div id="resume">
-        <header id="header" class="clear">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" />
+    <style>:root {
+  /* Colors */
+  --primaryColor: #212529;
+  --secondaryColor: #95a5a6;
+  --accentColor: #f1c40f;
+  --linkColor: #2ecc71;
+  --mutedColor: #f4f6f6;
+
+  /* Typography */
+  --ratio: 1.25;
+  --scale0: 1rem;
+  --scale1: calc(var(--scale0) * var(--ratio));
+  --scale2: calc(var(--scale1) * var(--ratio));
+  --scale3: calc(var(--scale2) * var(--ratio));
+  --scale4: calc(var(--scale3) * var(--ratio));
+  --scale5: calc(var(--scale4) * var(--ratio));
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  color: var(--primaryColor);
+  display: grid;
+  font: 1em/1.5 Lato, sans-serif;
+  gap: 2em;
+  grid-template-columns:
+    [full-start]
+    1fr
+    [main-start side-start]
+    minmax(min-content, 12em)
+    [side-end content-start]
+    minmax(min-content, 36em)
+    [main-end content-end]
+    1fr
+    [full-end];
+  grid-template-rows: auto [content] 0;
+  margin-bottom: 4em;
+}
+
+body::before {
+  content: '';
+  grid-column: full;
+  grid-row: content;
+}
+
+ol,
+ul {
+  padding-left: 1em;
+}
+
+li + li {
+  margin-top: 0.2em;
+}
+
+li::marker {
+  color: var(--mutedColor);
+}
+
+a {
+  color: var(--linkColor);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:focus,
+a:hover {
+  color: var(--accentColor);
+}
+
+h1,
+h2,
+h3,
+h5 {
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--scale5);
+}
+
+h2 {
+  color: var(--secondaryColor);
+  font-size: var(--scale4);
+}
+
+h3 {
+  color: var(--accentColor);
+  font-size: var(--scale3);
+  grid-column: side;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: var(--scale2);
+}
+
+h5 {
+  font-size: var(--scale1);
+}
+
+h6 {
+  font-size: var(--scale0);
+}
+
+blockquote {
+  border-left: 0.2em solid var(--mutedColor);
+  padding-left: 1em;
+}
+
+cite {
+  color: var(--secondaryColor);
+  font-style: inherit;
+}
+
+cite::before {
+  content: '— ';
+}
+
+.masthead {
+  background: var(--mutedColor);
+  display: inherit;
+  gap: inherit;
+  grid-column: full;
+  grid-template-columns: inherit;
+  padding: 4em 0;
+  row-gap: 0;
+}
+
+.masthead > *,
+section {
+  grid-column: main;
+}
+
+article > * + *,
+blockquote > * + * {
+  margin-top: 0.6em;
+}
+
+.stack {
+  display: grid;
+  gap: 1.5em;
+}
+
+.grid-list {
+  display: grid;
+  gap: 1em;
+}
+
+.spaced-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spaced-list:first-child::before {
+  border-bottom: 1px solid var(--mutedColor);
+  content: '';
+  flex-grow: 1;
+  margin: 0 1em;
+  order: 1;
+}
+
+.spaced-list > :nth-child(2) {
+  order: 2;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.tag-list > li {
+  background: var(--mutedColor);
+  margin: 0 0.2em 0.2em 0;
+  padding: 0.2em 0.6em;
+}
+
+@media print, (min-width: 48em) {
+  h3 {
+    text-align: right;
+    margin-bottom: inherit;
+  }
+
+  .masthead > *,
+  section {
+    grid-column: content;
+  }
+
+  section {
+    display: contents;
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+</style>
+  </head>
+  <body>
+      <header class="masthead">
+          <h1>Jonathan Scott Gilbert</h1>
+          <h2>Software Engineer</h2>
+      </header>
+      <section id="contact">
+        <h3>Contact</h3>
+        <div class="grid-list">
             <div>
-                <h1 class="name">Jonathan Scott Gilbert</h1>
-                <h2 class="label">Software Engineer</h2>
+              <h4>Email</h4>
+              <a href="mailto:jonathan.gilbert@mavs.uta.edu">jonathan.gilbert@mavs.uta.edu</a>
             </div>
-
-            <span class="location">
-                <span class="address">404 Hastings Dr,</span>
-                <span class="postalCode">TX 75104,</span>
-                <span class="city">Cedar Hill,</span>
-                <span class="region">Texas</span>
-                <span class="countryCode">US</span>
-            </span>
-
-
-            <div id="contact">
-                <div class="website">
-                    <span class="fa fa-external-link"></span>
-                    <a target="_blank" target="_blank"
-                        href="https://jon-tree-gilbert.github.io">https://jon-tree-gilbert.github.io</a>
-                </div>
-                <div class="email">
-                    <span class="fa fa-envelope-o"></span>
-                    <a href="mailto:jonathan.gilbert@mavs.uta.edu">jonathan.gilbert@mavs.uta.edu</a>
-                </div>
-                <div class="phone">
-                    <span class="fa fa-mobile"></span>
-                    <a href="tel:(214) 673-9240">(214) 673-9240</a>
-                </div>
+            <div>
+              <h4>Phone</h4>
+              (214) 673-9240
             </div>
+            <div>
+              <h4>Website</h4>
+              <a href="https://jon-tree-gilbert.github.io">jon-tree-gilbert.github.io</a>
+            </div>
+        </div>
+      </section>
 
-        </header>
-
-
-        <section class="section margin1">
-            <header>
-                <h2 class='section-title'>Skills</h2>
-            </header>
-            <section id="skills">
-                <div class="item">
+      <section id="volunteer">
+        <h3>Volunteer</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Boy Scouts of America</h4>
+                  <span>
+                    <time datetime="2013">Dec 2012</time> –
+                    <time datetime="2016">Dec 2015</time>
+                  </span>
                 </div>
-            </section>
-        </section>
-        <section class="section">
-            <header>
-                <h2 class='section-title'>Projects <span class="item-count">(3)</span></h2>
-            </header>
-            <section id="projects">
-                <section class="project-item">
-
-                    <header>
-                        <div class="position">Post-Seek</div>
-                        <div class="date">
-                            <span class="startDate">January 2019</span>
-                            <span class="endDate">- May 2019</span>
-                        </div>
-                    </header>
-                    <span class="website">
-                        <a target="_blank"
-                            href="https://github.com/jimmy12201/Post-Seek">https://github.com/jimmy12201/Post-Seek</a>
-                    </span>
-                    <ul class="keywords">
-                        <li>node</li>
-                        <li>javascript</li>
-                    </ul>
-                    <div class="item">
-                        <ul class="highlights">
-                            <li>
-                                <p>Returns job listings based on qualifications instead of keywords and filters</p>
-                            </li>
-                            <li>
-                                <p>Built on NodeJS</p>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="project-item">
-
-                    <header>
-                        <div class="position">Lockheed Martin -- Advanced Control Actuation Drive System (ACADS)</div>
-                        <div class="date">
-                            <span class="startDate">August 2019</span>
-                            <span class="endDate">- January 2020</span>
-                        </div>
-                    </header>
-                    <ul class="keywords">
-                        <li>javascript</li>
-                        <li>c++</li>
-                        <li>AM57x</li>
-                        <li>electron</li>
-                        <li>node</li>
-                    </ul>
-                    <div class="item">
-                        <ul class="highlights">
-                            <li>
-                                <p>Worked with both Software and Hardware teams to develop regenerative braking control
-                                    system</p>
-                            </li>
-                            <li>
-                                <p>Built front-end on Electron platform to control ACADS system and display usage
-                                    statistics</p>
-                            </li>
-                            <li>
-                                <p>Develop interconnectivity with AM57x microprocessor</p>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="project-item">
-
-                    <header>
-                        <div class="position">Graphics Pipeline</div>
-                        <div class="date">
-                            <span class="startDate">August 2020</span>
-                            <span class="endDate">- December 2020</span>
-                        </div>
-                    </header>
-                    <ul class="keywords">
-                        <li>c</li>
-                        <li>3d</li>
-                        <li>graphics pipeline</li>
-                    </ul>
-                    <div class="item">
-                        <ul class="highlights">
-                            <li>
-                                <p>Full pipeline from points in space to full 3D model</p>
-                            </li>
-                            <li>
-                                <p>Transformation code written in C</p>
-                            </li>
-                            <li>
-                                <p>Converted contents of Simple Vertex Face Mesh (SVFM) into Spatial Data File (SDF) 3D
-                                    Model for viewing</p>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </section>
-        </section>
-        <section class="section">
-            <header>
-                <h2 class='section-title'>Volunteer</h2>
-            </header>
-            <section id="volunteer">
-                <section class="volunteer-item">
-
-                    <input id="volunteer-item-0" type="checkbox" class="toggle-item" checked="checked" />
-                    <label for="volunteer-item-0"></label>
-
-                    <header>
-                        <div class="header-left">
-                            <div class="position">
-                                Senior Patrol Leader
-                            </div>
-                            <div class="organization">
-                                Boy Scouts of America -- Troop 541
-                            </div>
-                        </div>
-                        <div class="date">
-                            <span class="startDate">
-                                January 2013
-                            </span>
-                            <span class="endDate">
-                                - January 2016
-                            </span>
-                        </div>
-                    </header>
-                    <div class="item">
-                        <div class="summary">
-                            <p>
-                            <p>Volunteer work with the Boy Scouts of America. Earned Eagle scout and inducted into the
-                                Order of the Arrow honor society. Built a community garden, volunteered at local food
-                                pantry, and acted as a leader to younger scouts.</p>
-                            </p>
-                        </div>
-                        <ul class="highlights">
-                            <li>
-                                <p>Earned Eagle Scout -- 2015</p>
-                            </li>
-                            <li>
-                                <p>Inducted into the Order of the Arrow -- 2015</p>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </section>
-        </section>
-        <section class="section">
-            <header>
-                <h2 class='section-title'>Education <span class="item-count">(1)</span></h2>
-            </header>
-
-            <section id="education">
-                <section class="education-item">
-                    <header>
-                        <div class="header-left">
-                            <div class="studyType">
-                                Bachelors of Science
-                            </div>
-                            <div class="area">
-                                Software Engineering
-                            </div>
-                            <div class="institution">
-                                University of Texas -- Arlington
-                            </div>
-                        </div>
-                        <div class="date">
-                            <span class="startDate">
-                                2016
-                            </span>
-                            <span class="endDate">
-                                - 2020
-                            </span>
-                        </div>
-                    </header>
-
-
-                    <ul class="courses">
-                        <li>CSE 4316/4317 -- Computer System Design Project (capstone)</li>
-                        <li>CSE 4322 -- Software Project Management</li>
-                        <li>CSE 4303 -- Computer Graphics</li>
-                    </ul>
-
-                    <div class="item">
-                    </div>
-                </section>
-            </section>
-        </section>
-        <section class="section margin1">
-            <header>
-                <h2 class='section-title'>Languages</h2>
-            </header>
-            <section id="languages">
-                <div class="display">
-                    <h3 class="language">
-                        English
-                    </h3>
-                    <div class="item">
-                        <div class="level fluency native speaker">
-                            <em>Native speaker</em>
-                            <div class="bar"></div>
-                        </div>
-                    </div>
+                <div class="spaced-list">
+                    <strong>Senior Patrol Leader -- Troop 541</strong>
                 </div>
-            </section>
-        </section>
-
-</body>
-
+              </header>
+                <p>Volunteer work with the Boy Scouts of America. Earned Eagle scout and inducted into the Order of the Arrow honor society. Built a community orchard, volunteered at the local food pantry, and acted as a peer leader to younger scouts.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Earned Eagle Scout -- 2015</li>
+                    <li>Inducted into the Order of the Arrow -- 2015</li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="education">
+        <h3>Education</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>University of Texas -- Arlington</h4>
+                  <span>
+                    <time datetime="2016-11-29">Nov 2016</time> –
+                    <time datetime="2020-12-17">Dec 2020</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Software Engineering</strong>
+                </div>
+              </header>
+                <p>Bachelors of Science</p>
+                <h5>Courses</h5>
+                <ul>
+                    <li>CSE 4316/4317 -- Computer System Design Project (capstone)</li>
+                    <li>CSE 4322 -- Software Project Management</li>
+                    <li>CSE 4303 -- Computer Graphics</li>
+                    <li>CSE 4361 -- Software Design Patterns</li>
+                    <li>CSE 4321 -- Software Testing &amp; Maintenance</li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="projects">
+        <h3>Projects</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Capstone with Lockheed Martin -- Advanced Control Actuation Drive System</h4>
+                  <span>
+                    <time datetime="2019-08-21">Aug 2019</time> –
+                    <time datetime="2020-01-21">Jan 2020</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                  <span>
+                      <strong>Tester, Developer, Presenter</strong>
+                      at <strong>UTA in cooperation with Lockheed Martin</strong>
+                  </span>
+                </div>
+              </header>
+                <p>Developed software front-end for ACADS regenerative braking system with a team of student engineers</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Worked with both Software and Hardware teams to develop regenerative braking control system</li>
+                    <li>Built front-end on Electron platform to control ACADS system and display usage statistics</li>
+                    <li>Interfaced with AM57x microprocessor</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Post-Seek</h4>
+                  <span>
+                    <time datetime="2019-01-14">Jan 2019</time> –
+                    <time datetime="2019-05-03">May 2019</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                  <span>
+                      <strong>Testing, Presenter, Co-Manager</strong>
+                      at <strong>CSE 4322 -- Software Project Management</strong>
+                  </span>
+                    <a href="https://github.com/jimmy12201/Post-Seek">github.com/jimmy12201/Post-Seek</a>
+                </div>
+              </header>
+                <p>Job searching utility that returns job listings based on qualifications instead of keywords and filters</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Built on NodeJS</li>
+                    <li>Uses a resume-like form to search for and return job results</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Graphics Pipeline</h4>
+                  <span>
+                    <time datetime="2020-08-23">Aug 2020</time> –
+                    <time datetime="2020-12-08">Dec 2020</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                  <span>
+                      <strong>Developer</strong>
+                      at <strong>CSE 4303 -- Computer Graphics</strong>
+                  </span>
+                </div>
+              </header>
+                <p>Developed 3D graphics pipeline over semester-long course</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Full pipeline from points in space to full 3D model</li>
+                    <li>Transformation code written in C</li>
+                    <li>Converted contents of Simple Vertex Face Mesh (SVFM) into Spatial Data File (SDF) 3D Model for viewing</li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="skills">
+        <h3>Skills</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Programming</h4>
+                <ul class="tag-list">
+                    <li>C/C++</li>
+                    <li>Go</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Tools and Software</h4>
+                <ul class="tag-list">
+                    <li>GNU GCC/Make</li>
+                    <li>CMake</li>
+                    <li>Git + GitHub</li>
+                    <li>Pandoc</li>
+                    <li>Visual Studio Code</li>
+                    <li>SQLite</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Great Collaboration Skills with Engineers and Clients</h4>
+            </div>
+            <div>
+                <h4>Quick to Adapt to New Changes and Environments</h4>
+            </div>
+            <div>
+                <h4>Enjoys Problem Solvng and Finding Beneficial Compromise</h4>
+            </div>
+        </div>
+      </section>
+      <section id="languages">
+        <h3>Languages</h3>
+        <div class="grid-list">
+            <div>
+                <h4>English</h4>
+              Native speaker
+            </div>
+        </div>
+      </section>
+  </body>
 </html>
